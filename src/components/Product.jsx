@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import {Button, Card} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 
 const Product = ({product}) => {
   return (
