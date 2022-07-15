@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {Button, Col, Form, Row} from 'react-bootstrap';
 import {useDispatch, useSelector} from 'react-redux';
-import {Link, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import {getUserDetails, updateUserProfile} from '../actions/userActions';
