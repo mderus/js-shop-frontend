@@ -5,7 +5,11 @@ const Footer = () => {
     <footer>
       <Container>
         <Row>
-          <Col className='text-center py-3'>Copyright &copy; MD Shop</Col>
+          <Col className='text-center py-3'>
+            Copyright &copy; Aim
+            <i className='fa-solid fa-person-rifle' />
+            Fire
+          </Col>
         </Row>
       </Container>
     </footer>

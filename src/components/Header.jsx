@@ -18,7 +18,11 @@ const Header = () => {
       <Navbar collapseOnSelect bg='primary' variant='dark'>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand>MD Shop</Navbar.Brand>
+            <Navbar.Brand>
+              Aim
+              <i className='fa-solid fa-person-rifle' />
+              Fire
+            </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='navbarScroll' />
           <Navbar.Collapse id='navbarScroll'>
