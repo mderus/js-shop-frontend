@@ -23,7 +23,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
     };
 
     const {data} = await axios.post(
-      'http://localhost:5000/api/orders',
+      'https://js-gunshop-back.herokuapp.com/api/orders',
       order,
       config
     );
