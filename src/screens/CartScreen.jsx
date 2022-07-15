@@ -8,6 +8,9 @@ import Message from '../components/Message';
 const CartScreen = () => {
   const {id: productId} = useParams();
 
+  const userLogin = useSelector((state) => state.userLogin);
+  const {userInfo} = userLogin;
+
   const navigate = useNavigate();
 
   const {search} = useLocation();
@@ -31,11 +34,11 @@ const CartScreen = () => {
 
   const checkoutHandler = () => {
     navigate('/shipping');
-    // if (userInfo) {
-    //   navigate('/shipping');
-    // } else {
-    //   navigate('/login').then(navigate('/shipping'));
-    // }
+    if (userInfo) {
+      navigate('/shipping');
+    } else {
+      navigate('/login').then(navigate('/shipping'));
+    }
   };
   return (
     <Row>

@@ -10,6 +10,7 @@ import Loader from '../components/Loader';
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // const [message, setMessage] = useState('');
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,12 +30,16 @@ const LoginScreen = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    // if (!email | !password) {
+    //   setMessage('All fields are requiered');
+    // }
     dispatch(login(email, password));
   };
 
   return (
     <FormContainer>
       <h1>Sign In</h1>
+      {/* {message && <Message variant='danger'>{message}</Message>} */}
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>

@@ -39,18 +39,17 @@ const RegisterScreen = () => {
       setMessage('Passwords do not match!');
     } else {
       dispatch(register(name, email, password));
-      navigate('/');
     }
   };
 
   return (
     <FormContainer>
-      <h1>Sign In</h1>
+      <h1>Sign Up</h1>
+      {/* errors */}
+      {message && <Message variant='danger'>{message}</Message>}
+      {error && <Message variant='danger'>{error}</Message>}
+      {loading && <Loader />}
       <Form onSubmit={submitHandler}>
-        {/* errors */}
-        {message && <Message variant='danger'>{message}</Message>}
-        {error && <Message variant='danger'>{error}</Message>}
-        {loading && <Loader />}
         {/* NAME */}
         <Form.Group controlId='name'>
           <Form.Label>Name</Form.Label>
@@ -93,20 +92,18 @@ const RegisterScreen = () => {
         </Form.Group>
 
         <Button type='submit' variant='primary'>
-          Sign In
+          Sign Up
         </Button>
-
-        <Row className='py-3'>
-          <Col>
-            New Customer?{' '}
-            <Link
-              to={redirect ? `/register?redirect=${redirect}` : '/register'}
-            >
-              Register
-            </Link>
-          </Col>
-        </Row>
       </Form>
+
+      <Row className='py-3'>
+        <Col>
+          Already have an account?{' '}
+          <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
+            Sign In
+          </Link>
+        </Col>
+      </Row>
     </FormContainer>
   );
 };
