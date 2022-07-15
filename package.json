@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://cool-shortbread-f56f49.netlify.app/",
+  "proxy": "https://js-gunshop-back.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
