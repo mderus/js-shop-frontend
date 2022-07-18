@@ -37,7 +37,7 @@ const CartScreen = () => {
     if (userInfo) {
       navigate('/shipping');
     } else {
-      navigate('/login').then(navigate('/shipping'));
+      navigate('/login');
     }
   };
   return (
