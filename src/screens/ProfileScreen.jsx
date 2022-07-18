@@ -29,14 +29,14 @@ const ProfileScreen = () => {
     if (!userInfo) {
       navigate('/login');
     } else {
-      if (!user.name) {
+      if (!user || !user.name || success) {
         dispatch(getUserDetails('profile'));
       } else {
         setName(user.name);
         setEmail(user.email);
       }
     }
-  }, [dispatch, navigate, userInfo, user]);
+  }, [dispatch, navigate, userInfo, user, success]);
 
   const submitHandler = (e) => {
     e.preventDefault();
